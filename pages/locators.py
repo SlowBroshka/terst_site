@@ -10,3 +10,6 @@ class LoginPageLocators():
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
     LOGIN_URL = "login"
 
+
+class ProductPageLocators():
+    BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
