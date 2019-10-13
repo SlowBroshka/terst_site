@@ -29,6 +29,10 @@ class ProductPage(BasePage):
                 .format(main_price, basket_price)
         return True
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*Ppl.BASKET_ADDED), \
+            "Success message is presented, but should not be"
+
     def check_added_name(self):
         main_name = str(self.get_product_main())
         basket_name = str(self.book_success_bunner())
